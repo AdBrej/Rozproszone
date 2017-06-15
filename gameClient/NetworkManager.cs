@@ -82,14 +82,9 @@ namespace gameClient {
             client_receive.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
             client_receive.Client.Bind(ep_receive); // przez to blokowanie przez firewall
 
-            //byte[] dd = {0};
-
-
             byte[] start;
 
             start = client_receive.Receive(ref ep_receive); // czekanie na graczy 
-
-
 
             //send
             client_send = new UdpClient();

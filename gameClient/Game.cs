@@ -12,7 +12,6 @@ using SFML.System;
 
 
 
-
 namespace gameClient {
 
 
@@ -61,6 +60,16 @@ namespace gameClient {
         Dictionary<byte, NonPlayer> nonPlayers;
 
         public Game() {
+
+
+            Console.WriteLine("Number of players: ");
+            while (true) {
+                numPlayers = Convert.ToInt32(Console.ReadLine());
+                if (numPlayers < 1 || numPlayers > 4)
+                    Console.WriteLine("Wrong number. Try again");
+                else
+                    break;
+            }
 
             clock = new Clock();
 
